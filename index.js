@@ -6,6 +6,9 @@ function fetchBooks() {
     return response.json();
   })
   .then(function(json){
+    console.log(json[4])
+    // 1031st character in story. Make map of json.book.characters? point to array index 1030
+    // total pages of all books. map json.book.pages saved to variable then pages.length
     books = json
     renderBooks(json)
   });
